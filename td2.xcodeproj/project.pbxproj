@@ -18,6 +18,7 @@
 		98B6265327566E55009F2DAD /* td2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6265227566E55009F2DAD /* td2UITests.swift */; };
 		98B62664275675AE009F2DAD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B62663275675AE009F2DAD /* TableViewCell.swift */; };
 		98B6266927567917009F2DAD /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6266827567917009F2DAD /* model.swift */; };
+		98DCBB0F2761E917002820E1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DCBB0E2761E917002820E1 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		98B6265427566E55009F2DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98B62663275675AE009F2DAD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		98B6266827567917009F2DAD /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		98DCBB0E2761E917002820E1 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				98B6263927566E54009F2DAD /* Assets.xcassets */,
 				98B6263B27566E54009F2DAD /* LaunchScreen.storyboard */,
 				98B6263E27566E54009F2DAD /* Info.plist */,
+				98DCBB0E2761E917002820E1 /* AddViewController.swift */,
 			);
 			path = td2;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				98B6266927567917009F2DAD /* model.swift in Sources */,
 				98B6263527566E53009F2DAD /* ViewController.swift in Sources */,
+				98DCBB0F2761E917002820E1 /* AddViewController.swift in Sources */,
 				989E7A3E27578772002D4921 /* ChaudViewController.swift in Sources */,
 				98B62664275675AE009F2DAD /* TableViewCell.swift in Sources */,
 				98B6263127566E53009F2DAD /* AppDelegate.swift in Sources */,

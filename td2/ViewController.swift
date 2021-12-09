@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "details" {
-            let detailsViewController = segue.destination as! DetailsViewController
+            let detailsViewController = segue.destination as! ChaudViewController
             let myIndexPath = lesPhotosDuFun.indexPathForSelectedRow!
             let row = myIndexPath.row
             detailsViewController.myData = myData[row]
