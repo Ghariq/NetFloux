@@ -50,3 +50,16 @@ class Movie {
         }
     }
 }
+
+class MovieList {
+    var _movies : [Movie] = []
+    var _categorie = ""
+    
+    func addMovie(movie : Movie){
+        _movies.append(movie)
+    }
+    
+    func setCategorie(name : String) {
+        _categorie = name
+    }
+}
