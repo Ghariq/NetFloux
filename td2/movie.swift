@@ -11,10 +11,16 @@ class Movie {
     var _title = ""
     var _desc = ""
     var _nom_toph = ""
+    var _vu = false
     
     init(_ title : String,_ desc : String,_ nom_toph:String) {
         _title=title
         _desc=desc
         _nom_toph=nom_toph
+    }
+    
+    func changeVu() {
+        _vu = !_vu
+        print("test")
     }
 }

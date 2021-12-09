@@ -38,20 +38,36 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-dD-N4D">
+                                <rect key="frame" x="314" y="20" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cOm-f7-MRa"/>
+                                    <constraint firstAttribute="width" constant="80" id="e4m-Lw-JqI"/>
+                                </constraints>
+                                <state key="normal" title=" Vu" image="circle" catalog="system">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_vu:" destination="n8v-YV-jwp" eventType="touchUpInside" id="cyT-gz-PPN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Sd-ON-Jua"/>
                         <color key="backgroundColor" red="0.090390220207253846" green="0.090390220207253846" blue="0.090390220207253846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="awW-HA-OC6" firstAttribute="top" secondItem="7Sd-ON-Jua" secondAttribute="top" constant="20" id="3ol-mI-So1"/>
+                            <constraint firstItem="3JX-dD-N4D" firstAttribute="top" secondItem="7Sd-ON-Jua" secondAttribute="top" constant="20" id="9AG-iY-tmj"/>
                             <constraint firstItem="vtD-7S-OZQ" firstAttribute="top" secondItem="awW-HA-OC6" secondAttribute="bottom" constant="30" id="CdW-Sl-Xwn"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="vtD-7S-OZQ" secondAttribute="trailing" constant="20" id="Fdj-57-xg3"/>
                             <constraint firstItem="awW-HA-OC6" firstAttribute="leading" secondItem="7Sd-ON-Jua" secondAttribute="leading" constant="20" id="JNQ-2l-vae"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="awW-HA-OC6" secondAttribute="trailing" constant="20" id="cxv-s6-2Rv"/>
+                            <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="3JX-dD-N4D" secondAttribute="trailing" constant="20" id="gnh-Rf-GOu"/>
                             <constraint firstItem="vtD-7S-OZQ" firstAttribute="leading" secondItem="7Sd-ON-Jua" secondAttribute="leading" constant="20" id="oDr-cV-DYB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lHw-oL-C0C"/>
                     <connections>
+                        <outlet property="check" destination="3JX-dD-N4D" id="XA5-Na-NpX"/>
                         <outlet property="myDescription" destination="2VO-4p-kAD" id="Z9U-il-TGD"/>
                         <outlet property="myImage" destination="vtD-7S-OZQ" id="uLX-jH-faE"/>
                         <outlet property="myTitle" destination="awW-HA-OC6" id="8b3-RY-r9W"/>
@@ -230,6 +246,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
