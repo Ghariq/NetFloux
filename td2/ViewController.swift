@@ -73,9 +73,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         if unwindSegue.identifier == "save" {
             if let myTitle = addViewController.myTitle.text, let myDescription = addViewController.myDescription.text {
-                let new_data = MyData(title: myTitle,
-                                      description: myDescription,
-                                      image: String(Int.random(in: 1...5)))
+                let new_data = MyData(myTitle,
+                                      myDescription,
+                                      String(Int.random(in: 1...5)))
                 myData.append(new_data)
                 lesPhotosDuFun.reloadData()
             }

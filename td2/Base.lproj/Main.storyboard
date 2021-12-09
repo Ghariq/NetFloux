@@ -124,11 +124,12 @@
                                                 <constraint firstItem="yEk-sV-qRA" firstAttribute="leading" secondItem="TdV-xn-uJT" secondAttribute="trailing" constant="30" id="uwa-aM-jd9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.090390220209999997" green="0.090390220209999997" blue="0.090390220209999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="ldescriptionlo" destination="yEk-sV-qRA" id="9BL-Dy-fxj"/>
                                             <outlet property="limagelo" destination="TdV-xn-uJT" id="Qvo-gG-XTg"/>
                                             <outlet property="ltitrelo" destination="fGA-vf-fPx" id="bbz-CJ-jkp"/>
-                                            <segue destination="n8v-YV-jwp" kind="show" id="5Jf-Q9-GGl"/>
+                                            <segue destination="n8v-YV-jwp" kind="show" identifier="details" id="5Jf-Q9-GGl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -137,7 +138,13 @@
                                 <rect key="frame" x="20" y="110" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="MyTableView" id="5W4-Ka-TfT"/>
+                                    <navigationItem title="MyTableView" id="5W4-Ka-TfT">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="P8l-6D-FJD">
+                                            <connections>
+                                                <segue destination="lJj-Ck-OqG" kind="presentation" identifier="add" id="5zS-oB-Ms7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -152,20 +159,56 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="HsO-NC-6iB">
             <objects>
-                <viewController id="lJj-Ck-OqG" sceneMemberID="viewController">
+                <viewController id="lJj-Ck-OqG" customClass="AddViewController" customModule="td2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CE2-we-zfW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-Kx-ZdS">
+                                <rect key="frame" x="133" y="240" width="261" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTitle:" destination="IWK-Z3-kqW" eventType="editingDidEnd" id="FBJ-nt-WEO"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2K-zh-rUI">
+                                <rect key="frame" x="133" y="358" width="261" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r1-1B-FHN">
+                                <rect key="frame" x="20" y="365" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7C-vo-bL3">
+                                <rect key="frame" x="20" y="247" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dcZ-DB-XdB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="myDescription" destination="I2K-zh-rUI" id="fgn-Mw-RWC"/>
+                        <outlet property="myTitle" destination="Tzc-Kx-ZdS" id="aRr-E8-y1N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPc-mQ-TzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IWK-Z3-kqW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="932" y="798"/>
+            <point key="canvasLocation" x="931.88405797101461" y="797.54464285714278"/>
         </scene>
     </scenes>
     <resources>
