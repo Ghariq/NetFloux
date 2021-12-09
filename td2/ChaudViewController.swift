@@ -9,16 +9,15 @@ import UIKit
 
 class ChaudViewController: UIViewController {
 
-    var myData: MyData?
+    var myMovie: Movie?
 
-    @IBOutlet weak var myTitle: UILabel!
     @IBOutlet weak var myDescription: UILabel!
+    @IBOutlet weak var myTitle: UILabel!
     @IBOutlet weak var myImage: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let data = myData {
+        if let data = myMovie {
             myTitle.text = data._title
             myDescription.text = data._desc
             myImage.image = UIImage(named: data._nom_toph)

@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var lesPhotosDuFun: UITableView!
     
-    var myData = [MyData]()
+    var myMovie = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +19,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         for i in 1...3 {
             let num = i%3+1
             if (num==1){
-                myData.append(MyData("Isaac","Jeu de fou furieux", String(num)))
+                myMovie.append(Movie("Isaac","Jeu de fou furieux", String(num)))
             }
             else if (num==2){
-                myData.append(MyData("Lama","Le plus beau des animaux !!", String(num)))
+                myMovie.append(Movie("Lama","Le plus beau des animaux !!", String(num)))
             }
             else {
-                myData.append(MyData("BG","Valentin, motard de France et de Navarre", String(num)))
+                myMovie.append(Movie("BG","Valentin, motard de France et de Navarre", String(num)))
             }
         }
         
@@ -33,16 +33,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myData.count;
+        return myMovie.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "lacelluledejoline", for: indexPath) as! TableViewCell
         
-        cell.ltitrelo.text = myData[indexPath.row]._title
-        cell.ldescriptionlo.text = myData[indexPath.row]._desc
-        cell.limagelo.image = UIImage(named: myData[indexPath.row]._nom_toph)
+        cell.ltitrelo.text = myMovie[indexPath.row]._title
+        cell.ldescriptionlo.text = myMovie[indexPath.row]._desc
+        cell.limagelo.image = UIImage(named: myMovie[indexPath.row]._nom_toph)
         
         return cell
     }
@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         if editingStyle == .delete {
             // Find the row of the cell
             let row = indexPath.row
-            myData.remove(at: row)
+            myMovie.remove(at: row)
             lesPhotosDuFun.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             let detailsViewController = segue.destination as! ChaudViewController
             let myIndexPath = lesPhotosDuFun.indexPathForSelectedRow!
             let row = myIndexPath.row
-            detailsViewController.myData = myData[row]
+            detailsViewController.myMovie = myMovie[row]
         }
     }
     
@@ -73,10 +73,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         if unwindSegue.identifier == "save" {
             if let myTitle = addViewController.myTitle.text, let myDescription = addViewController.myDescription.text {
-                let new_data = MyData(myTitle,
+                let new_data = Movie(myTitle,
                                       myDescription,
                                       String(Int.random(in: 1...4)))
-                myData.append(new_data)
+                myMovie.append(new_data)
                 lesPhotosDuFun.reloadData()
             }
         }

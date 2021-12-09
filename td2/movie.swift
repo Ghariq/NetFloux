@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MyData {
+class Movie {
     var _title = ""
     var _desc = ""
     var _nom_toph = ""

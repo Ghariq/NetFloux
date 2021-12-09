@@ -18,7 +18,7 @@
 		98B6265327566E55009F2DAD /* td2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6265227566E55009F2DAD /* td2UITests.swift */; };
 		98B62664275675AE009F2DAD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B62663275675AE009F2DAD /* TableViewCell.swift */; };
 		98DCBB0F2761E917002820E1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DCBB0E2761E917002820E1 /* AddViewController.swift */; };
-		98DCBB142761F6BB002820E1 /* movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DCBB132761F6BB002820E1 /* movie.swift */; };
+		98DCBB142761F6BB002820E1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DCBB132761F6BB002820E1 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		98B6265427566E55009F2DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98B62663275675AE009F2DAD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		98DCBB0E2761E917002820E1 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		98DCBB132761F6BB002820E1 /* movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = movie.swift; sourceTree = "<group>"; };
+		98DCBB132761F6BB002820E1 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 				98B6263427566E53009F2DAD /* ViewController.swift */,
 				989E7A3D27578772002D4921 /* ChaudViewController.swift */,
 				98B62663275675AE009F2DAD /* TableViewCell.swift */,
-				98DCBB132761F6BB002820E1 /* movie.swift */,
+				98DCBB132761F6BB002820E1 /* Movie.swift */,
 				98B6263627566E53009F2DAD /* Main.storyboard */,
 				98B6263927566E54009F2DAD /* Assets.xcassets */,
 				98B6263B27566E54009F2DAD /* LaunchScreen.storyboard */,
@@ -275,7 +275,7 @@
 				989E7A3E27578772002D4921 /* ChaudViewController.swift in Sources */,
 				98B62664275675AE009F2DAD /* TableViewCell.swift in Sources */,
 				98B6263127566E53009F2DAD /* AppDelegate.swift in Sources */,
-				98DCBB142761F6BB002820E1 /* movie.swift in Sources */,
+				98DCBB142761F6BB002820E1 /* Movie.swift in Sources */,
 				98B6263327566E53009F2DAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
