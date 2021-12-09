@@ -46,6 +46,7 @@
                                     <constraint firstAttribute="height" constant="50" id="cOm-f7-MRa"/>
                                     <constraint firstAttribute="width" constant="80" id="e4m-Lw-JqI"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title=" Vu" image="circle" catalog="system">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
@@ -210,6 +211,7 @@
                                 <items>
                                     <navigationItem title="Ajouter un film" id="5W4-Ka-TfT">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="P8l-6D-FJD">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <segue destination="lJj-Ck-OqG" kind="presentation" identifier="add" id="5zS-oB-Ms7"/>
                                             </connections>
