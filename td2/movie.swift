@@ -62,4 +62,6 @@ class MovieList {
     func setCategorie(name : String) {
         _categorie = name
     }
+    
+    //yiefggviuzdgvziuvfgbziu
 }
