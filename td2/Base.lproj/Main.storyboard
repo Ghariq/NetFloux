@@ -31,9 +31,11 @@
                                     <constraint firstAttribute="width" secondItem="vtD-7S-OZQ" secondAttribute="height" multiplier="307:178" id="qtV-L7-FZN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VO-4p-kAD">
-                                <rect key="frame" x="20" y="325" width="374" height="483"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VO-4p-kAD">
+                                <rect key="frame" x="20" y="367" width="374" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="3CP-1b-7Fd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,23 +53,39 @@
                                     <action selector="click_vu:" destination="n8v-YV-jwp" eventType="touchUpInside" id="cyT-gz-PPN"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsO-at-NVc">
+                                <rect key="frame" x="244" y="70" width="150" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="BBs-Q6-KgS"/>
+                                    <constraint firstAttribute="height" constant="20" id="Gdy-hp-NsM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Sd-ON-Jua"/>
                         <color key="backgroundColor" red="0.090390220207253846" green="0.090390220207253846" blue="0.090390220207253846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="awW-HA-OC6" firstAttribute="top" secondItem="7Sd-ON-Jua" secondAttribute="top" constant="20" id="3ol-mI-So1"/>
+                            <constraint firstItem="2VO-4p-kAD" firstAttribute="top" secondItem="vtD-7S-OZQ" secondAttribute="bottom" constant="50" id="7jr-aB-unG"/>
                             <constraint firstItem="3JX-dD-N4D" firstAttribute="top" secondItem="7Sd-ON-Jua" secondAttribute="top" constant="20" id="9AG-iY-tmj"/>
                             <constraint firstItem="vtD-7S-OZQ" firstAttribute="top" secondItem="awW-HA-OC6" secondAttribute="bottom" constant="30" id="CdW-Sl-Xwn"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="vtD-7S-OZQ" secondAttribute="trailing" constant="20" id="Fdj-57-xg3"/>
                             <constraint firstItem="awW-HA-OC6" firstAttribute="leading" secondItem="7Sd-ON-Jua" secondAttribute="leading" constant="20" id="JNQ-2l-vae"/>
+                            <constraint firstItem="CsO-at-NVc" firstAttribute="top" secondItem="awW-HA-OC6" secondAttribute="bottom" id="ctc-yf-Wu0"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="awW-HA-OC6" secondAttribute="trailing" constant="20" id="cxv-s6-2Rv"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="3JX-dD-N4D" secondAttribute="trailing" constant="20" id="gnh-Rf-GOu"/>
+                            <constraint firstItem="2VO-4p-kAD" firstAttribute="leading" secondItem="7Sd-ON-Jua" secondAttribute="leading" constant="20" id="lLR-6T-W42"/>
+                            <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="2VO-4p-kAD" secondAttribute="trailing" constant="20" id="mn4-Hw-GfY"/>
                             <constraint firstItem="vtD-7S-OZQ" firstAttribute="leading" secondItem="7Sd-ON-Jua" secondAttribute="leading" constant="20" id="oDr-cV-DYB"/>
+                            <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="CsO-at-NVc" secondAttribute="trailing" constant="20" id="qsC-Qd-H4b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lHw-oL-C0C"/>
                     <connections>
                         <outlet property="check" destination="3JX-dD-N4D" id="XA5-Na-NpX"/>
+                        <outlet property="date_vu" destination="CsO-at-NVc" id="deO-u6-4Z3"/>
                         <outlet property="myDescription" destination="2VO-4p-kAD" id="Z9U-il-TGD"/>
                         <outlet property="myImage" destination="vtD-7S-OZQ" id="uLX-jH-faE"/>
                         <outlet property="myTitle" destination="awW-HA-OC6" id="8b3-RY-r9W"/>

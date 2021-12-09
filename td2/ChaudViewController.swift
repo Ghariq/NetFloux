@@ -15,6 +15,7 @@ class ChaudViewController: UIViewController {
     @IBOutlet weak var myTitle: UILabel!
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var check: UIButton!
+    @IBOutlet weak var date_vu: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +26,9 @@ class ChaudViewController: UIViewController {
             myImage.image = UIImage(named: data._nom_toph)
             if (data._vu){
                 check.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
+                date_vu.isHidden=false
             }
         }
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -37,8 +37,11 @@ class ChaudViewController: UIViewController {
             data.changeVu()
             if (data._vu){
                 check.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
+                date_vu.text = data.dateToString()
+                date_vu.isHidden=false
             } else {
                 check.setImage(UIImage(systemName: "circle"), for: .normal)
+                date_vu.isHidden=true
             }
         }
     }
