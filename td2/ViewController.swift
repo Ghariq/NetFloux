@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 1...50 {
+        for i in 1...3 {
             let num = i%3+1
             if (num==1){
                 myData.append(MyData("Isaac","Jeu de fou furieux", String(num)))
@@ -75,11 +75,12 @@ class ViewController: UIViewController, UITableViewDataSource {
             if let myTitle = addViewController.myTitle.text, let myDescription = addViewController.myDescription.text {
                 let new_data = MyData(myTitle,
                                       myDescription,
-                                      String(Int.random(in: 1...5)))
+                                      String(Int.random(in: 1...4)))
                 myData.append(new_data)
                 lesPhotosDuFun.reloadData()
             }
         }
         // Use data from the view controller which initiated the unwind segue
     }
+    
 }

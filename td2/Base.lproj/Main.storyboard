@@ -189,6 +189,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZgI-x6-pdI">
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Ajouter une toph" id="tUa-hr-Vhn">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZWt-BY-1mx">
+                                            <connections>
+                                                <segue destination="IWK-Z3-kqW" kind="unwind" unwindAction="unwindToMainView:" id="9UR-rQ-Ie3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WF5-DC-678">
+                                            <connections>
+                                                <segue destination="IWK-Z3-kqW" kind="unwind" identifier="save" unwindAction="unwindToMainView:" id="UTD-0y-hk1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7C-vo-bL3">
                                 <rect key="frame" x="20" y="247" width="44" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
