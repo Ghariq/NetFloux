@@ -11,9 +11,10 @@ class ChaudViewController: UIViewController {
 
     var myData: MyData?
 
-    @IBOutlet weak var myDescription: UILabel!
     @IBOutlet weak var myTitle: UILabel!
+    @IBOutlet weak var myDescription: UILabel!
     @IBOutlet weak var myImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
