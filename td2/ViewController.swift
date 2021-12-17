@@ -16,19 +16,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 1...3 {
-            let num = i%3+1
-            if (num==1){
-                myMovie.append(Movie("Isaac","Jeu de fou furieux", String(num)))
-            }
-            else if (num==2){
-                myMovie.append(Movie("Lama","Le plus beau des animaux !!", String(num)))
-            }
-            else {
-                myMovie.append(Movie("BG","Valentin, motard de France et de Navarre", String(num)))
-            }
-        }
-        
         lesPhotosDuFun.dataSource = self
     }
 

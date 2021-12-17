@@ -9,15 +9,36 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
 
+    @IBOutlet var CategoriesTableView: UITableView!
     var myMovieLists = [MovieList]()
     
     override func viewDidLoad() {
         
-        
+        var josee = Movie("Josée, le tigre et les poissons", "desc", "1")
+        var oss117_3 = Movie("OSS 117 : Alerte Rouge en Afrique noire", "desc", "2")
+        var raya = Movie("Raya et le dernier dragon", "desc", "3")
+        var sw = Movie("Rogue One : A Star Wars Story", "desc", "4")
+        var arcane = Movie("Arcane", "desc", "5")
+        var teampuceau = Movie("40, toujours puceau", "desc", "6")
         
         var films = MovieList()
         films.setCategorie(name: "Films")
-        films.addMovie(movie: <#T##Movie#>)
+        films.addMovie(movie: sw)
+        films.addMovie(movie: oss117_3)
+        films.addMovie(movie: teampuceau)
+        
+        var films_animations = MovieList()
+        films_animations.setCategorie(name: "Films d'animations")
+        films_animations.addMovie(movie: josee)
+        films_animations.addMovie(movie: raya)
+        
+        var series = MovieList()
+        series.setCategorie(name: "Séries")
+        series.addMovie(movie: arcane)
+        
+        myMovieLists.append(films)
+        myMovieLists.append(films_animations)
+        myMovieLists.append(series)
         
         
         super.viewDidLoad()
@@ -52,6 +73,15 @@ class ListTableViewController: UITableViewController {
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "aff_films" {
+            let filmsViewController = segue.destination as! ViewController
+            let myIndexPath = CategoriesTableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            filmsViewController.myMovie = myMovieLists[row]._movies
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

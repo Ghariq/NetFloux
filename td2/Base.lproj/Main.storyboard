@@ -123,6 +123,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nom_categorie" destination="yV7-j5-6SD" id="dTK-1m-PHr"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="aff_films" id="Yq5-CT-TV4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -131,6 +132,9 @@
                             <outlet property="delegate" destination="y89-ci-rLx" id="5gT-4d-IFr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="CategoriesTableView" destination="rsx-f2-63m" id="ANX-Lh-1mA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paQ-2B-3KB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +145,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="td2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NETFLOUX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrB-kc-iti">
@@ -235,6 +239,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.090390220207253846" green="0.090390220207253846" blue="0.090390220207253846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gJe-tq-SxT"/>
                     <connections>
                         <outlet property="lesPhotosDuFun" destination="kn9-Gb-FQk" id="N72-CT-hQ8"/>
                     </connections>
