@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Titre de la toph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awW-HA-OC6">
-                                <rect key="frame" x="10" y="20" width="384" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre de la toph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awW-HA-OC6">
+                                <rect key="frame" x="5" y="20" width="404" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BS4-Wc-c4B"/>
                                 </constraints>
@@ -69,6 +69,7 @@
                             <constraint firstItem="awW-HA-OC6" firstAttribute="top" secondItem="7Sd-ON-Jua" secondAttribute="top" constant="20" id="3ol-mI-So1"/>
                             <constraint firstItem="vtD-7S-OZQ" firstAttribute="top" secondItem="CsO-at-NVc" secondAttribute="bottom" constant="20" id="7gL-nd-Zij"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="vtD-7S-OZQ" secondAttribute="trailing" constant="20" id="Fdj-57-xg3"/>
+                            <constraint firstItem="awW-HA-OC6" firstAttribute="leading" secondItem="7Sd-ON-Jua" secondAttribute="leading" constant="5" id="Lzy-dQ-Lj3"/>
                             <constraint firstItem="2VO-4p-kAD" firstAttribute="top" secondItem="vtD-7S-OZQ" secondAttribute="bottom" constant="10" id="PA0-qY-afG"/>
                             <constraint firstItem="CsO-at-NVc" firstAttribute="top" secondItem="3JX-dD-N4D" secondAttribute="bottom" constant="5" id="fzJ-Ly-vdL"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="3JX-dD-N4D" secondAttribute="trailing" constant="20" id="gnh-Rf-GOu"/>
@@ -77,6 +78,7 @@
                             <constraint firstItem="vtD-7S-OZQ" firstAttribute="leading" secondItem="7Sd-ON-Jua" secondAttribute="leading" constant="20" id="oDr-cV-DYB"/>
                             <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="CsO-at-NVc" secondAttribute="trailing" constant="20" id="qsC-Qd-H4b"/>
                             <constraint firstItem="3JX-dD-N4D" firstAttribute="top" secondItem="awW-HA-OC6" secondAttribute="bottom" constant="5" id="s9r-YG-FMc"/>
+                            <constraint firstItem="7Sd-ON-Jua" firstAttribute="trailing" secondItem="awW-HA-OC6" secondAttribute="trailing" constant="5" id="voj-0K-4p8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lHw-oL-C0C"/>
@@ -100,14 +102,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.090197376910000002" green="0.090194381769999998" blue="0.090194977819999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="separatorColor" red="0.090197376910000002" green="0.090194381769999998" blue="0.090194977819999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexColor" systemColor="systemRedColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.090197376910000002" green="0.090194381769999998" blue="0.090194977819999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.090197376910000002" green="0.090194381769999998" blue="0.090194977819999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="dNj-0C-AFS">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <textAttributes key="titleTextAttributes">
                                 <color key="textColor" systemColor="systemRedColor"/>
                             </textAttributes>
@@ -130,8 +132,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NomCategorie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV7-j5-6SD">
-                                            <rect key="frame" x="10" y="4" width="394" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NomCategorie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV7-j5-6SD">
+                                            <rect key="frame" x="10" y="5" width="394" height="34"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <color key="textColor" systemColor="systemRedColor"/>
                                             <nil key="highlightedColor"/>
@@ -140,6 +142,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="yV7-j5-6SD" secondAttribute="trailing" constant="10" id="IUa-4Z-zqH"/>
                                         <constraint firstItem="yV7-j5-6SD" firstAttribute="leading" secondItem="B2H-Zl-9JT" secondAttribute="leading" constant="10" id="j2j-Kl-m4K"/>
+                                        <constraint firstItem="yV7-j5-6SD" firstAttribute="top" secondItem="B2H-Zl-9JT" secondAttribute="top" constant="5" id="kQg-pB-SIW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.090197376910000002" green="0.090194381769999998" blue="0.090194977819999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -242,7 +245,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blT-cY-ecg">
                                 <rect key="frame" x="20" y="110" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.01191526949062423" green="0.011857707802263726" blue="0.011972831178984733" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.011764705882352941" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" systemColor="systemRedColor"/>
                                 </textAttributes>
