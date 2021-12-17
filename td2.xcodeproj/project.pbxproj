@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		989159B9276213E700F1E54B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989159B8276213E700F1E54B /* ListViewController.swift */; };
+		5684883A276CC36100B482C4 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56848839276CC36100B482C4 /* ListTableViewController.swift */; };
 		989E7A3E27578772002D4921 /* ChaudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989E7A3D27578772002D4921 /* ChaudViewController.swift */; };
 		98B6263127566E53009F2DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6263027566E53009F2DAD /* AppDelegate.swift */; };
 		98B6263327566E53009F2DAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6263227566E53009F2DAD /* SceneDelegate.swift */; };
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		989159B8276213E700F1E54B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		56848839276CC36100B482C4 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		989E7A3D27578772002D4921 /* ChaudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaudViewController.swift; sourceTree = "<group>"; };
 		98B6262D27566E53009F2DAD /* td2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = td2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B6263027566E53009F2DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +89,7 @@
 		98B6262427566E53009F2DAD = {
 			isa = PBXGroup;
 			children = (
+				56848839276CC36100B482C4 /* ListTableViewController.swift */,
 				98B6262F27566E53009F2DAD /* td2 */,
 				98B6264627566E55009F2DAD /* td2Tests */,
 				98B6265127566E55009F2DAD /* td2UITests */,
@@ -120,7 +121,6 @@
 				98B6263B27566E54009F2DAD /* LaunchScreen.storyboard */,
 				98B6263E27566E54009F2DAD /* Info.plist */,
 				98DCBB0E2761E917002820E1 /* AddViewController.swift */,
-				989159B8276213E700F1E54B /* ListViewController.swift */,
 			);
 			path = td2;
 			sourceTree = "<group>";
@@ -276,9 +276,9 @@
 				98B6263527566E53009F2DAD /* ViewController.swift in Sources */,
 				98DCBB0F2761E917002820E1 /* AddViewController.swift in Sources */,
 				989E7A3E27578772002D4921 /* ChaudViewController.swift in Sources */,
+				5684883A276CC36100B482C4 /* ListTableViewController.swift in Sources */,
 				98B62664275675AE009F2DAD /* TableViewCell.swift in Sources */,
 				98B6263127566E53009F2DAD /* AppDelegate.swift in Sources */,
-				989159B9276213E700F1E54B /* ListViewController.swift in Sources */,
 				98DCBB142761F6BB002820E1 /* Movie.swift in Sources */,
 				98B6263327566E53009F2DAD /* SceneDelegate.swift in Sources */,
 			);
