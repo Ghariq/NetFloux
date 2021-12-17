@@ -82,7 +82,7 @@ class ListTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwindToMainView(_ unwindSegue: UIStoryboardSegue) {
+   /* @IBAction func unwindToMainView(_ unwindSegue: UIStoryboardSegue) {
         let addViewController = unwindSegue.source as! AddViewController
         if unwindSegue.identifier == "cancel_cate" {
             addViewController.dismiss(animated: true, completion: nil)
@@ -98,7 +98,7 @@ class ListTableViewController: UITableViewController {
             }
         }
         // Use data from the view controller which initiated the unwind segue
-    }
+    }*/
     
     
     /*

@@ -18,6 +18,7 @@ class ChaudViewController: UIViewController {
     @IBOutlet weak var date_vu: UILabel!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         if let data = myMovie {
