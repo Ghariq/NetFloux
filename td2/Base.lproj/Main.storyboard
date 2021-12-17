@@ -102,9 +102,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="dNj-0C-AFS">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Ajouter une catégorie" id="Dx1-sP-6bZ">
+                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="1tZ-V1-kEE">
+                                        <connections>
+                                            <segue destination="KvJ-if-6jq" kind="show" id="4ez-Dj-kJb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nom_categorie" id="rai-6b-U2E" customClass="LesCategoriesTableViewCell" customModule="td2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rai-6b-U2E" id="B2H-Zl-9JT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -246,6 +259,22 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="NVD-mh-aI4">
+            <objects>
+                <viewController id="KvJ-if-6jq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="frc-ff-RNS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qmv-0m-obu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j7L-Ml-M4g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pri-Qa-cSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="862"/>
+        </scene>
         <!--Add View Controller-->
         <scene sceneID="HsO-NC-6iB">
             <objects>
@@ -321,7 +350,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPc-mQ-TzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="IWK-Z3-kqW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="932" y="832"/>
+            <point key="canvasLocation" x="138" y="862"/>
         </scene>
     </scenes>
     <resources>
