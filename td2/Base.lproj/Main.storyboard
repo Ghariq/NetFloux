@@ -289,9 +289,15 @@
                                     <navigationItem title="Ajouter une catégorie" id="Ihq-05-HhW">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4Px-57-gOA">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="VMR-Js-RJJ" kind="unwind" identifier="cancel_cate" unwindAction="unwindToMainView:" id="6cK-la-GLy"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="hxC-Se-INp">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="VMR-Js-RJJ" kind="unwind" identifier="save_cate" unwindAction="unwindToMainView:" id="TrY-hX-ajv"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -319,6 +325,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pri-Qa-cSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="VMR-Js-RJJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-652.17391304347836" y="861.83035714285711"/>
         </scene>
