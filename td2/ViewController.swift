@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             if let myTitle = addViewController.myTitle.text, let myDescription = addViewController.myDescription.text {
                 let new_data = Movie(myTitle,
                                       myDescription,
-                                      String(Int.random(in: 1...4)))
+                                      String(Int.random(in: 1...7)))
                 myMovie.append(new_data)
                 lesPhotosDuFun.reloadData()
             }

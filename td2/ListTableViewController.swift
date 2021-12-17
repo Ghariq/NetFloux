@@ -82,6 +82,25 @@ class ListTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToMainView(_ unwindSegue: UIStoryboardSegue) {
+        let addViewController = unwindSegue.source as! AddViewController
+        if unwindSegue.identifier == "cancel_cate" {
+            addViewController.dismiss(animated: true, completion: nil)
+        }
+        if unwindSegue.identifier == "save_cate" {
+            if let myTitle = addViewController.myTitle.text, let myDescription = addViewController.myDescription.text {
+                
+                let new_data = MovieList()
+                new_data.setCategorie(name: <#T##String#>)
+                
+                myMovieLists.append(new_data)
+                CategoriesTableView.reloadData()
+            }
+        }
+        // Use data from the view controller which initiated the unwind segue
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
