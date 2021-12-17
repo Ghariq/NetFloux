@@ -27,6 +27,7 @@ class ChaudViewController: UIViewController {
             if (data._vu){
                 check.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
                 date_vu.isHidden=false
+                date_vu.text = data.dateToString()
             }
         }
     }
