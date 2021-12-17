@@ -7,29 +7,53 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var lesPhotosDuFun: UITableView!
+    @IBOutlet weak var search_movie: UISearchBar!
     
     var myMovie = [Movie]()
+    var myFilteredMovie = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        search_movie.delegate = self
         lesPhotosDuFun.dataSource = self
+        
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        myFilteredMovie = myMovie.filter({$0._title.lowercased().contains(searchText.lowercased()) || $0._desc.lowercased().contains(searchText.lowercased()) })
+        lesPhotosDuFun.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myMovie.count;
+        if search_movie.text!.isEmpty {
+            
+            return myMovie.count
+        }
+        else {
+            
+            return myFilteredMovie.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "lacelluledejoline", for: indexPath) as! TableViewCell
         
-        cell.ltitrelo.text = myMovie[indexPath.row]._title
-        cell.ldescriptionlo.text = myMovie[indexPath.row]._desc
-        cell.limagelo.image = UIImage(named: myMovie[indexPath.row]._nom_toph)
+        if search_movie.text!.isEmpty {
+            cell.ltitrelo.text = myMovie[indexPath.row]._title
+            cell.ldescriptionlo.text = myMovie[indexPath.row]._desc
+            cell.limagelo.image = UIImage(named: myMovie[indexPath.row]._nom_toph)
+        }
+        else {
+            cell.ltitrelo.text = myFilteredMovie[indexPath.row]._title
+            cell.ldescriptionlo.text = myFilteredMovie[indexPath.row]._desc
+            cell.limagelo.image = UIImage(named: myFilteredMovie[indexPath.row]._nom_toph)
+        }
+        
         
         return cell
     }
@@ -38,7 +62,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         if editingStyle == .delete {
             // Find the row of the cell
             let row = indexPath.row
-            myMovie.remove(at: row)
+            if search_movie.text!.isEmpty {
+                myMovie.remove(at: row)
+            }
+            else {
+                myFilteredMovie.remove(at: row)
+            }
+            
             lesPhotosDuFun.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -48,7 +78,14 @@ class ViewController: UIViewController, UITableViewDataSource {
             let detailsViewController = segue.destination as! ChaudViewController
             let myIndexPath = lesPhotosDuFun.indexPathForSelectedRow!
             let row = myIndexPath.row
-            detailsViewController.myMovie = myMovie[row]
+            if search_movie.text!.isEmpty {
+                detailsViewController.myMovie = myMovie[row]
+            }
+            else {
+                detailsViewController.myMovie = myFilteredMovie[row]
+                
+            }
+            
         }
     }
     
@@ -69,5 +106,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         // Use data from the view controller which initiated the unwind segue
     }
+    
+    
     
 }

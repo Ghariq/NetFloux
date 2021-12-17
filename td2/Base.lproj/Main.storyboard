@@ -272,6 +272,7 @@
                     <navigationItem key="navigationItem" id="gJe-tq-SxT"/>
                     <connections>
                         <outlet property="lesPhotosDuFun" destination="kn9-Gb-FQk" id="N72-CT-hQ8"/>
+                        <outlet property="search_movie" destination="mMP-Lm-diA" id="lYw-gZ-NXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
